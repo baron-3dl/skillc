@@ -158,8 +158,8 @@ receiver at rebuild time.
 Then package it for sharing. If this session can write and zip files (a shell or
 code-execution tool is available), put the file in a folder named for the skill as
 `SKILL.md`, zip that folder to `<name>.zip`, and offer it for download. That archive
-drops straight into another person's claude.ai (Settings, then Capabilities, then
-Skills, then upload) or a Claude Code skills folder, with no rezipping. If this session
+drops straight into another person's claude.ai (Customize, then Skills, then "Upload a
+skill") or a Claude Code skills folder, with no rezipping. If this session
 cannot write files, emit the file text and tell the author to save it as
 `<name>/SKILL.md` and zip that folder before sharing.
 

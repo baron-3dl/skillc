@@ -9,8 +9,13 @@
 You got Claude doing something just right. You share it, and for everyone else it falls
 flat, because it quietly leaned on *your* setup. skillc is a **skill that makes skills**:
 tell it what you want, show it a couple of examples you like, and it hands you one file
-you can send to anyone. Their Claude sets it up for itself and reports how well it
-transferred.
+you can send to anyone.
+
+What makes the file different is what is inside it. It does not carry finished
+instructions; it carries the examples you approved, plus a recipe. The first time
+someone uses it, their Claude rebuilds the skill against its own setup, tests itself on
+a few examples it was never shown, and reports a score. So the skill works there, or it
+says plainly that it does not, instead of quietly doing the wrong thing.
 
 ## Get skillc
 
@@ -20,8 +25,8 @@ Install it once, like any skill.
   `/plugin install skillc@skillc`.
 - **claude.ai:** download
   [skillc.zip](https://github.com/baron-3dl/skillc/releases/latest/download/skillc.zip),
-  turn on Code Execution (Settings, then Capabilities), then upload it under Settings,
-  then Capabilities, then Skills.
+  turn on "Code Execution and File Creation" (Settings, then Capabilities), then upload
+  the zip under Customize, then Skills (the "+" button, then "Upload a skill").
 - **OpenCode:** unzip skillc.zip into `~/.claude/skills/`; it is picked up automatically.
 
 Skills work on every Claude plan, Free included. The claude.ai Code Execution switch is a
@@ -101,13 +106,14 @@ claude.ai cannot use the plugin marketplace (that is Claude Code only), and the 
 point is your account's memory, custom instructions, and active style. It takes a skill as
 an uploaded ZIP, so the flow is download then upload:
 
-1. Turn on code execution: Settings, then Capabilities, then enable code execution (Skills
-   require it).
+1. Turn on code execution: Settings, then Capabilities, then enable "Code Execution and
+   File Creation" (Skills require it).
 2. Download the skill you want from the
    [latest release](https://github.com/baron-3dl/skillc/releases/latest). Each skill is its
    own zip: `voice.zip`, `explain-plainly.zip`, `commit-message.zip`, or `skillc.zip` for
    the builder.
-3. Upload it: Settings, then Capabilities, then Skills, then upload the zip.
+3. Upload it: Customize, then Skills, then the "+" button, then "Upload a skill", then
+   the zip.
 4. Use the skill. On first use it self-builds against your web session and reports the
    one-line outcome, then answers.
 
