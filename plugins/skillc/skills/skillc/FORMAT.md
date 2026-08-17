@@ -125,3 +125,26 @@ One of three plain outcomes, in one line:
   closest it got and the specific gaps. They know not to trust it, and why.
 - Cannot-build: a required bind is missing, named. It stops instead of producing
   something wrong.
+
+## Cross-compiled variants (optional)
+
+The file above adapts to whoever receives it: its rebuild runs on the receiver's own model.
+That is the default and needs nothing extra. When the author knows the receiver up front and
+it is a model known to be weak in skill-independent ways, they can cross-compile a variant
+tuned for that target. A variant adds three things and changes nothing else:
+
+- **A provenance header** right under the frontmatter, a short unbranded block naming the
+  triple the file is compiled for (model, agent, environment), the reference build it is
+  graded against, the target delta it carries, and its transfer grade (which stays "not yet
+  measured" until a grounding run earns a number). It carries no vendor branding; the file
+  stays the author's. The raw `<!-- target: model=.. agent=.. reference=.. -->` triple lives in
+  the target profile as build input; the shipped file states it in this header so the
+  frontmatter stays first and the file still loads.
+- **A target delta**, a block of measured corrections for the target's known habits (how that
+  model mis-follows any skill, and how to hold it to the discipline), stamped from the target
+  profile in `seed/targets/<target>.md`. The rebuild treats it as binding.
+
+The canonical file (no target) carries none of these and is unchanged. A provenance grade is
+not an attestation: an attestation cryptographically proves the file's integrity and
+authorship, provenance says which target the file was compiled for and how well it transfers.
+Both can be present. The delta and the honest grade are produced and improved by grounding.

@@ -51,3 +51,14 @@ bind, by name). It caches the rebuilt instructions so it does not redo the work,
 it checks every answer against the checks before sending. The receiver drops the
 file in their skills folder or uploads it the way any skill travels. No service, no
 registry, no build command on their side.
+
+## Cross-compile for a known weak target
+
+The rebuild above adapts to whoever receives the file, on their own model. When you know the
+receiver up front and it is a model known to be weak in skill-independent ways (a small local
+model on a different agent), you can cross-compile a variant tuned for that target: the same
+file plus a target delta of measured corrections and a provenance header naming the target and
+its earned transfer grade. See the cross-compile section of `seed/builder.skill.md`, the format
+in `FORMAT.md`, and the target profiles in `seed/targets/`. The corrections are produced and the
+grade earned by **grounding** (`seed/grounding.skill.md`): run the target through the skill on
+real work, find where it falls off, correct the target delta, re-verify.

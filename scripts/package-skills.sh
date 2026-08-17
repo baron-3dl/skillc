@@ -22,6 +22,9 @@ cp SKILL.md               plugins/skillc/skills/skillc/SKILL.md
 cp FORMAT.md              plugins/skillc/skills/skillc/FORMAT.md
 cp seed/builder.skill.md  plugins/skillc/skills/skillc/seed/builder.skill.md
 cp seed/rebuild.skill.md  plugins/skillc/skills/skillc/seed/rebuild.skill.md
+cp seed/grounding.skill.md plugins/skillc/skills/skillc/seed/grounding.skill.md
+mkdir -p plugins/skillc/skills/skillc/seed/targets
+cp seed/targets/*.md      plugins/skillc/skills/skillc/seed/targets/
 
 # --- plugin: skillc-examples (the demos) ---
 mkdir -p plugins/skillc-examples/.claude-plugin
