@@ -16,6 +16,13 @@ same inputs. You descend it by editing the target's delta (prose), never by chan
 skill's own carried definition, and never by making a check easier. A weaker-but-honest grade
 beats a strong-sounding claim.
 
+Grounding is agnostic to how a skill encodes what "works" means. Whatever the skill carries
+as its held-back acceptance, grounding runs that and descends the same loss: approved example
+pairs (skillc's default builder), checks against a real running instance, or a graded
+real-world task. It does not impose the example-pairs model onto a skill that grades some
+other way; it works over whatever acceptance the skill already carries. The method here is the
+comparative descent, not a particular way of saying what "works" is.
+
 ## When to run it
 
 After you cross-compile a variant for a target and want its provenance grade to be real
@@ -31,10 +38,11 @@ An episode is one honest measurement of how the target does the skill.
    environment. The target is the (model, agent) the variant is compiled for. It gets the file
    and nothing of yours: no coaching, no fixes mid-run. If you do the work for it, you are
    measuring yourself, not the target.
-2. The target rebuilds the skill from the file and does the skill's real work. Real work is the
-   skill's acceptance: the held-back example pairs, or, for a skill whose job is a real-world
-   task (stand a service up, operate a tool), the task itself on a real target in its own
-   isolated context, never a mock of it.
+2. The target rebuilds the skill from the file and does the skill's real work: its held-back
+   acceptance, in whatever form the skill carries it. That may be approved example pairs, or
+   checks against a real running instance, or a graded real-world task (stand a service up,
+   operate a tool) on a real target in its own isolated context, never a mock of it. Use the
+   skill's own acceptance; do not convert it to a form the skill does not use.
 3. Grade it yourself, honestly, against the real result: the acceptance score, or built /
    honest-failure / cannot-build with the specific gaps. Do not trust the target's own report
    of its outcome; check the real thing. That number is `score(target)` for this episode.
