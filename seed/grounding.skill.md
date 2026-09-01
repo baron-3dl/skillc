@@ -50,6 +50,30 @@ An episode is one honest measurement of how the target does the skill.
    for `score(reference)`. The gap is the loss. If the reference itself only reaches N, parity
    is N, not a perfect score.
 
+## Seal the phenotype (make "nothing of yours" structural, not remembered)
+
+Step 1 says the target gets the file and nothing of yours. That rule is easy to state and easy
+to slide out of: the moment you write the dispatch by hand you start coaching, adding the
+scenario mechanics, or handing over the very fix the run was supposed to surface, and then the
+pass is yours, not the genome's. Do not rely on remembering the rule. SEAL the dispatch: fill
+only two slots and add nothing else.
+
+```
+Read ONLY this one file and follow it: <genome path>. Read nothing else in the repo for
+procedure; a step you need that is not in it is a FINDING, name it, do not fill it from your own
+knowledge. Environment (already up): <env descriptor: endpoints, what is running, what you must
+not start/stop/scale>. Run the skill's own held-back acceptance against this environment, end to
+end, and honest-grade each part with your OWN independent checks (never the target's self-report).
+Report, per part: built / honest-failure / honest-blank with the ACTUAL check output; every point
+where the skill alone was insufficient/ambiguous/wrong, quoted; and whether the pass was
+reproducible from the skill ALONE or only worked because you supplied something it did not.
+```
+
+The two slots are the ONLY operator input. No task specifics, no procedure, no hints, no fixes:
+the genome must carry all of that, and if it does not, that absence is the measurement. A
+hand-written dispatch is the confound; if you are composing prose beyond the two slots, stop, you
+are leaking your DNA into the phenotype and the loss you measure will be your own.
+
 ## Estimating the gradient (where the target fell off)
 
 Read the target's transcript and find the FIRST place it stepped off the recipe. That first
@@ -97,6 +121,19 @@ should move, or the correction was wrong; back it out.
 - **Convergence.** Stop when the loss is at or under your parity bar and stable across repeats,
   or when a divergence is a real capability limit of the target (say so, and label the honest
   grade it reached). Do not grind past a real ceiling.
+- **Robust acceptance: a capable, honest target defeats a naive setup.** Do not build an
+  acceptance or failure condition the target can satisfy by being resourceful rather than by
+  doing what you meant. A target with tools will `grep` and read your grader source and lift a
+  "secret" value it was never told; it will satisfy a contradictory or impossible spec with a
+  legal trick, and pass honestly. Neither is dishonesty, so neither measures what you wanted.
+  Make acceptance uncheatable: the check must live where the target cannot read-then-satisfy it,
+  and a "cannot proceed" condition must be one the target genuinely cannot route around (denying
+  its gates is a reliable one; deleting its session may be a no-op your harness's API does not
+  actually perform, verify it). A run that passed because your setup was soft is not a pass.
+- **Reproducibility is the acceptance test of a correction.** A fix is proven only when a fresh,
+  sealed phenotype (above) reproduces the improved result FROM the genome alone, in the same
+  environment, with none of your DNA. If it only holds when you re-supply what you supplied
+  before, you tuned yourself, not the genome; the gene is still missing.
 
 ## Output
 
